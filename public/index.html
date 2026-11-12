@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Феод</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 12 L2 5 L5 8 L8 3.5 L11 8 L14 5 L14 12Z' fill='%23e3b23c' stroke='%238a6512'/%3E%3Crect x='2' y='12' width='12' height='2' fill='%23c99a2e'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header id="top">
+    <div class="brand">Феод</div>
+    <div id="res"></div>
+    <div id="status"></div>
+  </header>
+  <main>
+    <div id="mapwrap">
+      <canvas id="map"></canvas>
+      <div id="hint" class="hidden"></div>
+      <div id="sel" class="hidden"></div>
+      <div id="toasts"></div>
+      <div id="mapctl">
+        <button id="btnHome" title="До свого села (H)">⌂</button>
+        <button id="btnZin" title="Наблизити (+)">+</button>
+        <button id="btnZout" title="Віддалити (−)">−</button>
+      </div>
+      <div id="conn" class="hidden">Зв'язок із сервером втрачено. Перепідключаюсь…</div>
+    </div>
+    <aside id="side">
+      <nav id="tabs"></nav>
+      <section id="panel"></section>
+    </aside>
+  </main>
+
+  <div id="login" class="overlay hidden">
+    <div class="box">
+      <h1>Феод</h1>
+      <p>Середньовічний тайкун для кількох гравців на одному комп'ютері.</p>
+      <p class="hint">Зазвичай гра відкривається через <b>play.bat</b> і входить автоматично під вашим обліковим записом Windows. Якщо ви відкрили сторінку вручну, введіть ім'я облікового запису:</p>
+      <div class="row"><input id="loginAcc" type="text" placeholder="Обліковий запис" maxlength="64"><button id="loginBtn">Увійти</button></div>
+      <p id="loginErr" class="down"></p>
+    </div>
+  </div>
+  <div id="modal" class="overlay hidden"><div id="modalBox" class="box"></div></div>
+
+  <script src="defs.js"></script>
+  <script src="icons.js"></script>
+  <script src="render.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
